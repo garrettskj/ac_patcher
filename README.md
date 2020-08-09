@@ -5,14 +5,12 @@ AnyConnect Patcher for Freedom
 I got tired of AnyConnect always stealing/locking my route tables, especially after I started to use more constainerization. It just got really frustrating to need to continually disconnect/reconnect, and/or hit up the systems admin person (me) to change the VPN side of things.
 
 ## How it works
-The AnyConnect Binary uses the following C++ method: ``CHostConfigMgr::StartInterfaceAndRouteMonitoring()``
+The AnyConnect Linux Binary uses the following C++ method: ``CHostConfigMgr::StartInterfaceAndRouteMonitoring()``
 The following python script finds that method, then backtracks to where that method is being called from, and then NOPs out that call.
 Since each version of AnyConnect this memory address will change, I needed something that would do this process automatically, hence the scripting of radare2.
 
 ## How to use it.
 Install AnyConnect
-
-*tested with 4.9.0086*
 
 Install dependancies:
 
@@ -31,3 +29,7 @@ You'll need to ``sudo`` this for elevated privileges, due to the following:
 sudo ./anyconnect_patcher.sh
 ```
 
+## Version Compatibility:
+Tested with:
+- 4.9.00086
+- 4.9.01095
