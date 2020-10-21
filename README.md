@@ -2,7 +2,7 @@
 AnyConnect Patcher for Freedom
 
 ## Backstory
-I got tired of AnyConnect always stealing/locking my route tables, especially after I started to use more constainerization. It just got really frustrating to need to continually disconnect/reconnect, and/or hit up the systems admin person (me) to change the VPN side of things.
+I got tired of AnyConnect always stealing/locking my route tables, especially after I started to use more containerization. It just got really frustrating to need to continually disconnect/reconnect, and/or hit up the systems admin person (me) to change the VPN side of things.
 
 ## How it works
 The AnyConnect Linux Binary uses the following C++ method: ``CHostConfigMgr::StartInterfaceAndRouteMonitoring()``
@@ -30,6 +30,8 @@ sudo ./anyconnect_patcher.sh
 ```
 
 ## Version Compatibility:
-Tested with:
+Tested / Confirmed with:
 - 4.9.00086
 - 4.9.01095
+- 4.9.02028 (Unable to test, Mac only)_
+- 4.9.0304x
