@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 import os
 import r2pipe
@@ -7,18 +7,19 @@ AC_PATH = '/opt/cisco/anyconnect/bin/'
 
 def get_the_evil_method():
  r = r2pipe.open(AC_PATH + 'vpnagentd')
+ print ("Opening and analyzing, 15 seconds...")
  r.cmd('aaa')
  method_location = r.cmd("afl | grep StartInterface | awk \'{print $1}\'").rstrip()
- r.cmd('q')
- 
+ r.quit()
  return method_location
 
 def find_the_call(method_location):
  r = r2pipe.open(AC_PATH + 'vpnagentd')
  r.cmd('aaa')
+ print ("Opening and finding the method now, 15 seconds...")
  r.cmd('s ' + method_location )
  called_from = r.cmd("axt | awk \'{print $2}\'").rstrip()
- r.cmd('q')
+ r.quit()
 
  return called_from
 
@@ -28,7 +29,7 @@ def nop_the_call(called_from):
     r.cmd('aaa')
     r.cmd('s ' + called_from )
     r.cmd('wx 9090909090')
-    r.cmd('q')
+    r.quit()
     return True
   else:
     return False

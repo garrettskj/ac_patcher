@@ -13,9 +13,13 @@ Since each version of AnyConnect this memory address will change, I needed somet
 Install AnyConnect
 
 Install dependancies:
+*Note: radare2 is now longer included with Ubuntu after 20.04. You can download binaries from: https://github.com/radareorg/radare2/releases*
 
 ```
-apt install radare2
+dpkg -i radare2_5.3.1_amd64.deb
+```
+*Note: As of 20210722 - r2pipe is not compatible with radare2 5.4.0 - the instructions on this page were tested with various versions up to 5.3.1*
+```
 pip3 install r2pipe
 ```
 
@@ -35,3 +39,8 @@ Tested / Confirmed with:
 - 4.9.01095
 - 4.9.02028 (Unable to test, Mac only)_
 - 4.9.0304x
+- 4.9.04053
+- 4.9.05042
+- 4.9.06037
+- 4.10.00093
+- 4.10.01075
