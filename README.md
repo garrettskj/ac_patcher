@@ -6,19 +6,19 @@ I got tired of AnyConnect always stealing/locking my route tables, especially af
 
 ## How it works
 The AnyConnect Linux Binary uses the following C++ method: ``CHostConfigMgr::StartInterfaceAndRouteMonitoring()``
-The following python script finds that method, then backtracks to where that method is being called from, and then NOPs out that call.
-Since each version of AnyConnect this memory address will change, I needed something that would do this process automatically, hence the scripting of radare2.
+The following Python script finds that method, then backtracks to where that method is being called from, and then NOPs out that call.
+Since this address will change in each version of AnyConnect, I needed something that would do this process automatically, hence the scripting of `radare2`.
 
 ## How to use it.
 Install AnyConnect
 
 Install dependancies:
-*Note: radare2 is now longer included with Ubuntu after 20.04. You can download binaries from: https://github.com/radareorg/radare2/releases*
+*Note: `radare2` is no longer included with Ubuntu after 20.04. You can download binaries from: https://github.com/radareorg/radare2/releases*
 
 ```
 dpkg -i radare2_5.3.1_amd64.deb
 ```
-*Note: As of 20210722 - r2pipe is not compatible with radare2 5.4.0 - the instructions on this page were tested with various versions up to 5.3.1*
+*Note: As of 20210722 - `r2pipe` is not compatible with radare2 5.4.0 - the instructions on this page were tested with various versions up to 5.3.1*
 ```
 pip3 install r2pipe
 ```
@@ -27,7 +27,7 @@ pip3 install r2pipe
 This will stop the system service, dissassemble the binary looking for the methods, and patch it out and then restart the service.
 You'll need to ``sudo`` this for elevated privileges, due to the following:
 1. the default installation directory ``/opt/cisco/anyconnect/`` requires elevated privileges for writing
-1. stopping/starting the vpnagentd service requires service management privs.
+1. stopping/starting the `vpnagentd` service requires service management privs.
 
 ```
 sudo ./anyconnect_patcher.sh
