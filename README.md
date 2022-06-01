@@ -30,7 +30,7 @@ You'll need to ``sudo`` this for elevated privileges, due to the following:
 1. stopping/starting the `vpnagentd` service requires service management privs.
 
 ```
-sudo ./anyconnect_patcher.sh
+sudo ./anyconnect_patcher.py
 ```
 
 ## Version Compatibility:
