@@ -1,0 +1,17 @@
+version: "2.4"
+services:
+  anyhack:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      network: host
+    pid: host
+    privileged: true
+    command: ./anyconnect_patch.py
+    volumes:
+      - ${PWD}:/srv
+      - /opt/cisco/anyconnect/:/opt/cisco/anyconnect
+      - /run/systemd/system:/run/systemd/system
+      - /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket
+      - /sys/fs/cgroup:/sys/fs/cgroup
+    network_mode: none
