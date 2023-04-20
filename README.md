@@ -76,6 +76,7 @@ docker compose down
 
 ## Version Compatibility:
 Tested / Confirmed with:
+- 4.8.03036
 - 4.9.00086
 - 4.9.01095
 - 4.9.02028 (Unable to test, Mac only)_
