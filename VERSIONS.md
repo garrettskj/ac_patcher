@@ -25,6 +25,11 @@ time; recheck cisco.com before treating any "unconfirmed" entry as settled.
 - [x] 4.10.00093
 - [x] 4.10.01075
 - [x] 4.10.04071
+- [x] 4.10.07073 _(PR #14, iuridiniz)_
+- [x] 5.1.11.388 _(PR #15, iuridiniz; reported working under
+  /opt/cisco/secureclient/bin/ using a return-0 patch on both call sites
+  rather than this script's plain-NOP first patch; not independently
+  reverified against that exact variant here)_
 
 ## AnyConnect 4.10.x maintenance line: needs testing
 
@@ -54,7 +59,6 @@ time; recheck cisco.com before treating any "unconfirmed" entry as settled.
 - [ ] 5.1.8.122 (MR8 update) _(confirmed version, untested)_
 - [ ] 5.1.9.113 (MR9) _(confirmed version, untested)_
 - [ ] 5.1.10.xxx _(unconfirmed)_
-- [ ] 5.1.11.388 _(confirmed version, untested)_
 - [ ] 5.1.12.146 (MR12) _(confirmed version, untested)_
 - [ ] 5.1.13.177 (MR13) _(confirmed version, untested)_
 - [ ] 5.1.14.145 (MR14) _(confirmed version, untested)_

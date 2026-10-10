@@ -87,6 +87,7 @@ Tested / Confirmed with:
 - 4.10.00093
 - 4.10.01075
 - 4.10.04071
+- 4.10.07073
 
 See [VERSIONS.md](VERSIONS.md) for the full version-coverage checklist,
 including newer AnyConnect 4.10.x builds and Cisco Secure Client 5.x
