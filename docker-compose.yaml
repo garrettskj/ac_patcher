@@ -1,4 +1,3 @@
-version: "2.4"
 services:
   anyhack:
     build:
@@ -11,6 +10,7 @@ services:
     volumes:
       - ${PWD}:/srv
       - /opt/cisco/anyconnect/:/opt/cisco/anyconnect
+      - /opt/cisco/secureclient/:/opt/cisco/secureclient
       - /run/systemd/system:/run/systemd/system
       - /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket
       - /sys/fs/cgroup:/sys/fs/cgroup

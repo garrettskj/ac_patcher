@@ -21,10 +21,10 @@ Install dependancies:
 *Note: `radare2` is no longer included with Ubuntu after 20.04. You can download binaries from: https://github.com/radareorg/radare2/releases*
 
 ```
-dpkg -i radare2_5.3.1_amd64.deb
+dpkg -i radare2_6.2.4_amd64.deb
 ```
 
-*Note: As of 20210722 - `r2pipe` is not compatible with radare2 5.4.0 - the instructions on this page were tested with various versions up to 5.3.1*
+*Note: as of 2026-10-10, verified working against radare2 6.2.4 with the `r2pipe` PyPI package (1.9.8). The `afl`/`axt`/`wx` commands this script relies on are unchanged across the 5.x -> 6.x line. Older notes about `r2pipe` being incompatible with radare2 5.4.0 (circa 2021) no longer apply to current releases.*
 
 ```
 pip3 install r2pipe
