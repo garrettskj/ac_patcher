@@ -1,8 +1,3 @@
-# Version Coverage
-
-Tracks AnyConnect / Cisco Secure Client versions this patcher has been tested
-against, and known versions still needing verification.
-
 Legend:
 - `confirmed`: version number verified against an official Cisco source
   (release notes index, Cisco/Umbrella community post) but **not yet tested**
@@ -65,16 +60,3 @@ time; recheck cisco.com before treating any "unconfirmed" entry as settled.
 - [ ] 5.1.14.145 (MR14) _(confirmed version, untested)_
 - [ ] 5.1.15.xxx / 5.1.16.xxx / 5.1.17.xxx _(unconfirmed)_
 - [ ] 5.1.18.314 _(confirmed version, untested, latest seen as of this list)_
-
-## How to add a version here
-
-1. Obtain the installer through a legitimate channel: a VPN headend you have
-   access to, your organization's Cisco support/CCO download portal, or an
-   installer package you already have on hand. Do not pull Cisco binaries
-   from unofficial third-party mirrors; provenance can't be verified and
-   this patcher already does binary patching, which makes running an
-   unverified binary especially risky.
-2. Run the patcher against it and record pass/fail.
-3. Check the box here and add it to the README's compatibility table.
-4. If the exact build differs from an "unconfirmed" placeholder above,
-   replace the placeholder with the real number.
