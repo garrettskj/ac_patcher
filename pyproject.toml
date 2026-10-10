@@ -1,0 +1,33 @@
+[project]
+name = "ac-patcher"
+version = "0.1.0"
+description = "AnyConnect/Secure Client patcher for Freedom"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+dependencies = [
+    "r2pipe>=1.9",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.8",
+    "bandit>=1.8",
+    "pytest>=8.3",
+]
+
+[tool.ruff]
+line-length = 90
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "C90", "I", "N", "UP", "B", "A", "S"]
+mccabe.max-complexity = 10
+
+[tool.bandit]
+exclude_dirs = ["tests"]
+
+[tool.uv]
+add-bounds = "major"
+exclude-newer = "2026-09-30"
+prerelease = "if-necessary"
