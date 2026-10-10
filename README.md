@@ -18,13 +18,13 @@ Since this address will change in each version of AnyConnect, I needed something
 ### Use at workstation
 
 Install dependancies:
-*Note: `radare2` is no longer included with Ubuntu after 20.04. You can download binaries from: https://github.com/radareorg/radare2/releases*
+*Note: `radare2` is not in Ubuntu's package repos. Download binaries from: https://github.com/radareorg/radare2/releases*
 
 ```
-dpkg -i radare2_5.3.1_amd64.deb
+dpkg -i radare2_6.2.4_amd64.deb
 ```
 
-*Note: As of 20210722 - `r2pipe` is not compatible with radare2 5.4.0 - the instructions on this page were tested with various versions up to 5.3.1*
+Verified working against radare2 6.2.4 with the `r2pipe` PyPI package (1.9.8).
 
 ```
 pip3 install r2pipe
