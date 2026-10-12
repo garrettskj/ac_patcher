@@ -3,7 +3,7 @@ revision = 5
 requires-python = ">=3.12"
 
 [options]
-exclude-newer = "2026-10-01T07:00:00Z"
+exclude-newer = "2026-10-01T00:00:00Z"
 
 [[package]]
 name = "ac-patcher"
